@@ -9,3 +9,14 @@ upstream:
     repo: git@github.com:kubernetes/examples
     directory: /staging/cockroachdb
     ref: master
+openAPI:
+  definitions:
+    io.k8s.cli.setters.replica-setter:
+      maximum: 10
+      minimum: 3
+      type: integer
+      x-k8s-cli:
+        setter:
+          name: replica-setter
+          value: "3"
+          setBy: Charlie
